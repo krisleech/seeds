@@ -44,7 +44,7 @@ module Seeds
           drop_fields<< item
         end
       end
-      if options.has_key?(:drop_common_fields)
+      if options.has_key?(:drop_fields_common)
         drop_fields<< "id"
         drop_fields<< "created_at"
         drop_fields<< "updated_at"

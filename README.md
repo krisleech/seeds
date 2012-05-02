@@ -44,7 +44,7 @@ To drop specific fields from all Model dumps
     
 To drop a predefined "common" set of fields (id,created_at,updated_at)
 
-    $ seeds:sow['{:drop_common_fields}']
+    $ seeds:sow['{:drop_fields_common}']
     
 ## Contributing
 
