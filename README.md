@@ -48,7 +48,7 @@ To drop a predefined "common" set of fields (id,created_at,updated_at)
     
 Example sending multiple options
 
-  $ seeds:sow['{:drop_fields_common => true, :drop_fields => "Field1,Field2", :include => "ModelName,ModelName"}']
+    $ seeds:sow['{:drop_fields_common => true, :drop_fields => "Field1,Field2", :include => "ModelName,ModelName"}']
     
 ## Contributing
 
