@@ -30,11 +30,11 @@ To create a seeds.rb file that includes data from all of your Models
 
     $ rake seeds:sow
     
-To only include certain Models
+To only include certain Models (this should work using table names also, but it's not tested yet)
 
     $ seeds:sow['{:include => "ModelName,ModelName"}']
 
-To only exclude certain Models
+To only exclude certain Models (this should work using table names also, but it's not tested yet)
 
     $ seeds:sow['{:exclude => "Modelname,ModelName"}']
     
@@ -45,6 +45,10 @@ To drop specific fields from all Model dumps
 To drop a predefined "common" set of fields (id,created_at,updated_at)
 
     $ seeds:sow['{:drop_fields_common => true}']
+    
+Example sending multiple options
+
+  $ seeds:sow['{:drop_fields_common => true, :drop_fields => "Field1,Field2", :include => "ModelName,ModelName"}']
     
 ## Contributing
 
