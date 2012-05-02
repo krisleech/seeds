@@ -20,29 +20,31 @@ Or install it yourself as:
 
 ## Usage
 
-First you will need to fire up your rails console using the command
+No need to fire up the rails console anymore, this baby runs as a rake task!
+The syntax is a little goofy because of the way rake takes in arguments,
+you are basically passing the entire hash as an argument, then it gets
+eval'd before being passed on to the Seeds Module.
 
-    $ rails c
 
 To create a seeds.rb file that includes data from all of your Models
 
-    $ Seeds.sow
+    $ rake seeds:sow
     
 To only include certain Models
 
-    $ Seeds.sow :include => "ModelName,ModelName"
+    $ seeds:sow['{:include => "ModelName,ModelName"}']
 
 To only exclude certain Models
 
-    $ Seeds.sow :exclude => "Modelname,ModelName"
+    $ seeds:sow['{:exclude => "Modelname,ModelName"}']
     
 To drop specific fields from all Model dumps
 
-    $ Seeds.sow :drop_fields => "Field1,Field2"
+    $ seeds:sow['{:drop_fields => "Field1,Field2"}']
     
 To drop a predefined "common" set of fields (id,created_at,updated_at)
 
-    $ Seeds.sow :drop_common_fields
+    $ seeds:sow['{:drop_common_fields}']
     
 ## Contributing
 
