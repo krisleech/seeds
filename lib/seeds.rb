@@ -1,5 +1,6 @@
 require "seeds/version"
 require "seeds/sow.rb"
+require "seeds/process_options.rb"
 module Seeds
   class Railtie < ::Rails::Railtie
     rake_tasks do
